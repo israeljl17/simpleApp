@@ -1,0 +1,23 @@
+<section ng-init="consultar()">
+    <h3>Editar Produto</h3>
+    <form id="editarProduto" class="col s12"></form>
+    <div class="row">
+        <div class="input-field col s12">
+            <input id="nome" type="text" ng-model="produto.nome" class="validate" />
+            <label for="nome" class="active">Nome</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s12">
+            <input id="preco" type="number" ng-model="produto.preco" class="validate" />
+            <label for="preco" class="active">Preco</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s12">
+            <input id="quantidade" type="number" ng-model="produto.quantidade" class="validate" />
+            <label for="quantidade" class="active">Quantidade</label>
+        </div>
+    </div>
+    <div class="row"><a ng-click="editar()" class="waves-effect waves-light btn grey darken-3">Salvar</a></div>
+</section>

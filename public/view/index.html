@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HF Teste</title>
+    <link rel="stylesheet" href="/lib/materialize/css/materialize.min.css">
+    <link href="/lib/materialize/css/icon.css" rel="stylesheet">
+</head>
+
+<body ng-app="hfTesteApp" class="grey lighten-3">
+    <nav class="teal darken-4">
+        <div class="nav-wrapper container"><a href="#/produtos" class="brand-logo left bold">HF Teste</a>
+            <ul id="nav-mobile" class="right">
+                <li ng-show='logado'><a href="#/produtos">Produtos</a></li>
+                <li ng-show='logado'><a href="#/produtos/adicionar">Adicionar</a></li>
+                <li ng-show='logado'><a href="#/usuarios/login">Logout</a></li>
+                <li ng-show='deslogado'><a href="#/usuarios/cadastrar">Cadastrar-se</a></li>
+                <li ng-show='deslogado'><a href="#/usuarios/login">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <ng-view></ng-view>
+    </div>
+    <script src="/lib/jquery/jquery.js"></script>
+    <script src="/lib/materialize/js/materialize.min.js"></script>
+    <script src="/lib/angular/angular.js"></script>
+    <script src="/lib/angular/angular-route.js"></script>
+    <script src="/lib/angular/ngStorage.min.js"></script>
+    <script src="/lib/angular/angular-resource.js"></script>
+    <script src="/lib/angular/dirPagination.js"></script>
+    <script src="/js/resource/app.js"></script>
+    <script src="/js/service/authService.js"></script>
+    <script src="/js/service/authInterceptor.js"></script>
+    <script src="/js/controller/produtoCtrl.js"></script>
+    <script src="/js/controller/usuarioCtrl.js"></script>
+</body>
+
+</html>

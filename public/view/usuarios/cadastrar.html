@@ -1,0 +1,23 @@
+<section>
+    <h3>Cadastrar Usuario</h3>
+    <form id="cadastrarUsuario" class="col s12"></form>
+    <div class="row">
+        <div class="input-field col s12">
+            <input id="email" type="email" ng-model="usuario.email" class="validate" />
+            <label for="email">Email</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s12">
+            <input id="senha" type="password" ng-model="usuario.senha" class="validate" />
+            <label for="senha">Senha</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s12">
+            <input id="confirmaSenha" type="password" ng-model="usuario.confirmaSenha" class="validate" />
+            <label for="confirmaSenha">Confirma Senha</label>
+        </div>
+    </div>
+    <div class="row"><a ng-click="cadastrar()" class="waves-effect waves-light btn grey darken-3">Cadastrar</a></div>
+</section>

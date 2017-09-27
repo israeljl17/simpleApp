@@ -1,0 +1,20 @@
+<section ng-init="consultar()">
+    <h3>Consultar Produto</h3>
+    <div class="row">
+        <div class="input-field col s12">
+            <h4>{{ produto.nome }}</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s12">
+            <h4>{{ produto.preco }}</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s12">
+            <h4>{{ produto.quantidade }}</h4>
+        </div>
+    </div>
+    <div class="row"><a href="#/produtos/editar/{{ produto._id }}" class="waves-effect waves-light btn grey darken-3">Editar</a></div>
+    <div class="row"><a ng-click="deletar()" class="waves-effect waves-light btn grey darken-3">Deletar</a></div>
+</section>

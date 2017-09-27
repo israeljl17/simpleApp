@@ -1,0 +1,26 @@
+<section>
+    <h3>Consultar Produtos</h3>
+    <div class="row">
+        <table class="bordered">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Preco</th>
+                    <th>Quantidade</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody ng-init="consultarTodos()">
+                <tr dir-paginate="p in produtos | itemsPerPage:5" pagination-id="prodx">
+                    <td>{{ p.nome }}</td>
+                    <td>{{ p.preco }}</td>
+                    <td>{{ p.quantidade }}</td>
+                    <td><a href="#/produtos/consultar/{{ p._id }}" class="waves-effect waves-light btn grey darken-3">Visualizar</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="row">
+        <dir-pagination-controls pagination-id="prodx" boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)" template-url="dir_pagination.tpl.html" class="fixedPagination center bold"></dir-pagination-controls>
+    </div>
+</section>
